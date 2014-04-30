@@ -1,0 +1,36 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <h3>Roles</h3>
+            </div>
+            <div>
+                <a href="<?php echo $this->url('mhr-acl/default', array('controller'=>'role', 'action'=>'add'));?>">Add Role</a>
+
+                <?php if (isset($roles)) : ?>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Full name</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <?php foreach($roles as $role): ?>
+                            <tbody>
+                            <tr>
+                                <td><?php echo $role->getRId(); ?></td>
+                                <td><?php echo $role->getRoleName(); ?></td>
+                                <td>
+                                    <a href="<?php echo $this->url('mhr-acl/default', array('controller'=>'role', 'action'=>'edit', 'id' => $role->getRId()));?>">Edit</a> |
+                                    <a href="<?php echo $this->url('mhr-acl/default', array('controller'=>'role', 'action'=>'delete', 'id' => $role->getRId()));?>">Delete</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        <?php endforeach; ?>
+                    </table>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>

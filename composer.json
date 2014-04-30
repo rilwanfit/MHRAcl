@@ -1,0 +1,44 @@
+{
+    "name":         "rilwanfit/MHRAcl",
+    "description":  "Zend\\Acl system for ZF2",
+    "type":         "library",
+    "license":      "GPL V2",
+    "homepage":     "https://github.com/rilwanfit/MHRAcl",
+    "keywords": [
+        "zf2",
+        "acl",
+        "mhracl",
+        "mhruser"
+    ],
+    "authors": [
+        {
+            "name":      "MH Rilwan",
+            "email":     "rilwanfit@gmail.com",
+            "homepage":  "http://mhrilwan.com/",
+            "role":      "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.2.*",
+        "doctrine/doctrine-orm-module": "0.*"
+    },
+    "require-dev": {
+        "doctrine/common":                    ">=2.3,<2.5-dev",
+        "rilwanfit/MHRAcl":                   "1.*"
+    },
+    "suggests": {
+        "rilwanfit/MHRUser":                "zfc-user provides a good default setup to get started with bjyauthorize",
+    },
+    "autoload": {
+        "psr-0": {
+            "MHRAcl\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
